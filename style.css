@@ -1,0 +1,29 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+.jqtree-toggler {
+    display: none
+}
+form {
+  display: inline-block;
+  float: right;
+  max-width: 35%
+}
+input {
+  max-width: 33%;
+  height: 80%;
+}
+/**button{  max-width: 50%;
+       width: fit-content
+}*/
+select{
+  max-width: 40%
+}
+.button_container {
+  width: 50%;
+  display: inline-block;
+}
+span {
+  cursor: pointer;
+}

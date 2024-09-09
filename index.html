@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!--<link rel="stylesheet" href="jqtree.css">-->
+  <link rel="stylesheet" href="https://lasermash36.ru/jquery.treeview.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+
+<body class="vh-100 vw-100 mw-100">
+  <div class="row h-10 m-0 p-0">
+    <div class="col overflow-auto border">
+        <div class="button_container">
+        <button id="directory">Каталог</button>
+        <button id="cart">Корзина</button>
+        <button id="sendmail">Отправить на почту</button>
+        <!--<button id="addToCart">Доб.</button>-->
+        </div>
+      <form id="search"> 
+          <input type="text" id="value" name="value">
+           <select name="type" id="type">
+               <option value="name">name</option>
+                <option value="part_number">part_number</option>
+                <option value="item">item</option>
+                <option value="___">___</option>
+          </select>
+          <input type="submit" value="Найти">
+      </form>
+    </div>
+  </div>
+  <div class="row container-fluid h-100 m-0 p-0">
+      <div class="col col-6 col-lg-5 pl-0 py-3 pb-6 mh-100 overflow-auto border">
+          <div class="container" id="treeview-container">
+              <div id="tree1" ></div>
+          </div>
+      </div>
+      <div class="col col-6 col-lg-7 p-0 mh-100 overflow-auto">
+          <div class="container-fluid p-0 h-25 border h-100 w-100" id="table-container"></div>
+      </div>
+  </div>
+    <div class="modal fade" id="imageModal" tabindex="-1"aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImage" src="" alt="Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="addToCartModal_" tabindex="-1"aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                <div class="modal-body">
+                    Добавлено в корзину. 
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <div class="modal"  id="addToCartModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="emailSentModal" tabindex="-1"aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    Письмо отправлено.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="searchFailedModal" tabindex="-1"aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    Поиск не дал результатов.
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            </div>
+        </div>
+    </div>
+      <script src="https://lasermash36.ru/jquery.min.js"></script>
+      <script src="tree.jquery.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <script src="https://lasermash36.ru/jquery.treeview.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="displayTable.js"></script>
+    <script src="script.js"></script>
+  <script>
+
+  </script>
+  
+</body>
+
+</html>
